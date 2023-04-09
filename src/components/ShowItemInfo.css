@@ -1,0 +1,99 @@
+.full-item {
+  margin-bottom: 20px;
+}
+
+/* .full-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  margin-bottom: 50px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 15px 10px;
+} */
+
+.full-item {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  z-index: 999;
+}
+
+.full-item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 600px;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 9px;
+}
+
+.full-item img {
+  margin: 0 auto;
+  width: 50%;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+.full-item h5,
+.full-item p,
+.full-item b {
+  margin: 10px 20px;
+}
+
+.full-item b {
+  color: #5fa36a;
+  font-weight: 600;
+}
+
+.full-item .add-to-card {
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  background: #ca5252;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+
+.full-item .add-to-card:hover {
+  transform: scale(1.15) translateY(-5px);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(220, 52, 52);
+  transition: all 500ms ease;
+}
+
+.close:hover {
+  transform: scale(1.5);
+}
