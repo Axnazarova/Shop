@@ -16,6 +16,7 @@ function App() {
   let [showItemInfo, setShowItemInfo] = useState(false)
   let [showItem, setShowItem] = useState()
 
+
   function addToOrder(item) {
     let isArray;
 
@@ -28,14 +29,13 @@ function App() {
       setOrders([...orders, item])
     }
 
-    console.log(orders)
   }
 
 
   function deleteOrders(id) {
     let filtered = orders.filter(el => el.id !== id)
     setOrders(filtered)
-    console.log(id)
+
   }
 
   function chooseCategory(category) {
@@ -69,7 +69,7 @@ function App() {
     fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
       .then(info => {
-        console.log(info)
+
         setItems(info)
         setCurrentItems(info)
       })

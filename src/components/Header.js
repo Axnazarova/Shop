@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom';
-import Link from 'react'
 import './Header.css'
 import { FaShoppingCart } from "react-icons/fa";
 import Order from "./Order.js";
@@ -9,17 +7,20 @@ import Order from "./Order.js";
 export default function Header({ orders, onDelete }) {
     let [cardOpen, setCardOpen] = useState(false)
 
+
     function showOrders(orders) {
         let summ = 0;
+
         orders.forEach(el => summ += Number(el.price))
         return (
             <div className='bag'>
                 {orders.map((el) => (< Order onDelete={onDelete} key={el.id} item={el} />))}
-                <p className='summ'>Сумма: {summ}$</p>
+                <p className='summ'>Сумма: {summ.toFixed(2)}$</p>
 
             </div>
         )
     }
+
 
     return (
 

@@ -36,3 +36,26 @@
   color: #ec0000;
   transform: scale(1.5);
 }
+
+.price {
+  display: inline-block;
+}
+
+.amount {
+  display: inline-flex;
+  justify-content: baseline;
+}
+
+.minus,
+.plus {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.minus {
+  margin-right: 3.5px;
+}
+
+.plus {
+  margin-left: 3.5px;
+}
